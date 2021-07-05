@@ -1,0 +1,76 @@
+{% extends "LAYOUT1.html" %}
+ 
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.t {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<!--<h2 style="text-align:center">Mobile Price Prediction</h2>-->
+
+<div class="card">
+  <img src="{{url_for('static', filename='phone.jpeg')}}" alt="John" style="width:80%; height: 50%;">
+ 
+  <p style="font-size: 20px">Predicting the price of a mobile phone is a tough challenge because similar products having minute differences such as brands, additional specifications, quality, demand of the product etc, based on these they can have different prices also. we have so many options and it's hard to select the best. our project is to predict the price range of the mobile phone according to the specifications. This not only helps the customers to decide the right mobile phone to purchase, but it also helps the seller to decide what should be the appropriate pricing of the mobile phone for the features that they offer. We classify the price range of mobile phones and not predict the actual prices with the basis of 21 different attributes of the mobile such as (colour, ram, battery power…etc). We classified the price range of mobile phones as:</p>
+<center>
+<h5 style="font-size: 20px">0 (low cost)</h5>
+<h5 style="font-size: 20px">1 (medium cost)</h5>
+<h5 style="font-size: 20px">2 (high cost)</h5>
+<h5 style="font-size: 20px">4 (very high cost)</h5>
+</center>
+  <div class="t" style="margin: 24px 0;">
+    <a href="https://www.amazon.com/s?k=phones&ref=nb_sb_noss_1"><i class="fa fa-dribbble"></i></a> 
+    <a href="https://www.smartprix.com/mobiles/?uq"><i class="fa fa-phone"></i></a>  
+    <a href="https://m.gsmarena.com/"><i class="fa-internet-explorer"></i></a>
+     <a href="https://www.flipkart.com/search?q=phones&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <i class="fa fa-dribbble"></i></a>  
+     <h3><a href="{{url_for('cont')}}"><b>CONTACT US</b></a></center></h3>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "LAYOUT1.html" %}
+ 
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.t {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<!--<h2 style="text-align:center">Mobile Price Prediction</h2>-->
+
+<div class="card">
+  <img src="{{url_for('static', filename='ph2.jpeg')}}" alt="John" style="width:50%; height: 30%;">
+  <div >
+
+   <b><h3 style="font-family: Snell Roundhand, cursive;color:navy;"> The Accuracy of the Predicted Mobile is {{ acc }} </h3>
+   <h3 style="font-family: Snell Roundhand, cursive;color:navy;"> The cost of the Mobile is {{ test}}</h3>
+   <h5 style="font-family: Tahoma,cursive;">Cost [0] Refers to the price in between Rs.5000 to 10000</h5>
+   <h5 style="font-family: Tahoma,cursive;">Cost [1] Refers to the price in between Rs.11000 to 20000</h5>
+   <h5 style="font-family: Tahoma,cursive;">Cost [2] Refers to the price in between Rs.20000 to 40000</h5>
+   <h5 style="font-family: Tahoma,cursive;">Cost [3] Refers to the price in between Rs.40000 to 100000</h5></b>
+</div>
+    <div class="t" style="margin: 24px 0;">
+   <h4 style="font-family:Times New Roman"><B>CLICK ON BELOW LINKS TO BUY YOUR MOBILE!!! HAPPY SHOPPING</B></h4>
+ 
+    <a href="https://www.amazon.com/s?k=phones&ref=nb_sb_noss_1"><i class="fa fa-dribbble">AMAZON</i></a> 
+   	<BR>
+     <a href="https://www.flipkart.com/search?q=phones&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <i class="fa fa-dribbble">FLIPCART</i></a>  
+     
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+{% endblock %}

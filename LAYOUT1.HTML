@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  background-image: url('{{ url_for('static',filename='backg.png')}}');
+  background-repeat: no-repeat;
+  background-position: center;
+background-attachment: fixed;
+  
+ background-origin: content-box;  
+}
+.topnav-right {
+  float:left;
+}
+
+ 
+</style>
+
+<head>
+  <title>My Project </title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.2/js/buttons.print.min.js"></script>
+
+</head>
+<body>
+  <center><b><i><h1 style= "font-family: Snell Roundhand, cursive;color:navy;">MOBILE PRICE PREDICTION</h1></i></b></center>
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a style="color: white" class="navbar-brand" href="{{url_for('pics')}}">MOBILE PRICE PREDICTION</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li><a style="color: white" href="{{url_for('layout')}}"><b>PREDICTION</b></a></li>
+        <li><a style="color: white" href="{{url_for('pj')}}"><B>ABOUT THE PROJECT</B></a></li>
+      </ul>
+         <ul class="nav navbar-nav navbar-right">
+        
+        <li>
+        <a style="color: white" href="{{url_for('cont')}}"><b>NEED HELP</b></a> </li> 
+      </ul>
+  </div>
+        
+    
+       </div>
+  </div>
+</nav>
+  </div>
+  <marquee  width="100%" direction="left" height="50px" ><b style="color: blue;font-family: Andale Mono, monospace"><i>
+1.The right amount of storage</i></b><b style="color: black"><i>  2.Battery life that fits your daily requirements</i></b><b style="color: orange"><i> 3.Camera quality that justifies the price</b></i> <b style="color: green"> <i> 4.Choice of operating system </i></b><b><i> 5.Choose for a long time support</i></b>
+</marquee>
+
+  <div class="container">
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+  <!---<div class="container-fluid bg-info">
+    <center><h1>FOOTER</h1></center>
+  </div>--->
+</body>
+</html>

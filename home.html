@@ -1,0 +1,208 @@
+{% extends "LAYOUT1.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Project</title>
+	<style >
+		.button {
+  background-color: black; /* Green */
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  position: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black ;
+  width: 180px;
+  position: center;
+}
+
+.button:hover {
+  background-color: #FFFFCC	;
+  color: solid black;
+  width: 180px;
+  position: center
+}
+
+</style>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<center><h1 style="font-family:  Times new roman, cursive">ENTER THE ATTRIBUTES</h1>
+		<form class="form-horizontal" action="{{url_for('code')}}" method="POST">
+			<div class="split left">
+			<label class="control-label col-sm-2" for="batery">Battery Input</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="battery" name="battery_power" placeholder="Enter the battery Capacity">
+			    </div>
+			</div>
+			<div class="split left">
+			<label class="control-label col-sm-2" for="blue">Bluetooth</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="blue" name="blue" placeholder="Enter 1 if bluetooth present else 0">
+			    </div>
+			   
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="clock_speed">Clock Speed</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="clock_speed" name="clock_speed" placeholder="Enter the Clock Speed">
+			    </div>
+			    
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="dual_sim">Dual Sim</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="dual_sim" name="dual_sim" placeholder="Enter 1 if its dual sim else 0 ">
+			    </div>
+			    <br>
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="fc">Front Camera</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="fc" name="fc" placeholder="Enter the front camera pixels">
+			    </div>
+			    <br>
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="four_g">4G Technology</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="four_g" name="four_g" placeholder="Enter 1 if its 4G else 0">
+			    </div>
+			   
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="int_memory">Internal Memory</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="int_memory" name="int_memory" placeholder="Enter the size of internal memory">
+			    </div>
+			    <br>
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="m_dep">Mobile Depth</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="m_dep" name="m_dep" placeholder="Enter the depth of the mobile">
+			    </div>
+			    
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="mobile_wt">Mobile Weight</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="mobile_wt" name="mobile_wt" placeholder="Enter the weight of the mobile">
+			    </div>
+			    <br>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="n_cores">Processor</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="n_cores" name="n_cores" placeholder="Enter the number of cores of processor">
+			    </div>
+
+			</div>
+				<div class="split left">
+			<label class="control-label col-sm-2" for="pc">Primary Camera</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="pc" name="pc" placeholder="Enter the pixels of primary camera">
+			    </div>
+			   <br>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="px_height">Pixel Resolution Height</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="px_height" name="px_height" placeholder="Enter the pixel resolution height">
+			    </div>
+			    <br>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="px_width">Pixel Resolution Width</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="px_width" name="px_width" placeholder="Enter the pixel resolution width">
+			    </div>
+
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="ram">Ram</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="ram" name="ram" placeholder="Enter the ram size in megabytes">
+			    </div>
+			   
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="sc_h">Screen Height</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="sc_h" name="sc_h" placeholder="Enter height of screen in cm">
+			    </div>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="sc_w">Screen Width</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="sc_w" name="sc_w" placeholder="Enter width of the screen in cm">
+			    </div>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="talk_time">Talk Time</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="talk_time" name="talk_time" placeholder="Enter the longest time that a single battery charge will last when you are">
+			    </div>
+			    <br>
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="three_g">3G Technology</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="three_g" name="three_g" placeholder="Enter 1 if its 3G else 0">
+			    </div>
+			    
+			</div>
+				<div class="split right">
+			<label class="control-label col-sm-2" for="touch_screen">Touch Screen</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="touch_screen" name="touch_screen" placeholder="Enter 1 if its touch screen else 0">
+			    </div>
+			</div>
+			<div class="split right">
+			<label class="control-label col-sm-2" for="wifi">WIFI</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="wifi" name="wifi" placeholder="Enter 1 if it has wifi else 0">
+			    </div>
+			</div>
+			
+
+  
+</center>
+
+	</div>
+	<br>
+	<center>
+	<div class="form-group">
+	<div class="col-sm-offset-1 col-sm-10">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</div>
+</div>
+	</form>
+</center>
+</div>
+</body>
+</html>
+
+{% endblock %}
+
